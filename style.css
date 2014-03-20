@@ -18,9 +18,9 @@
 body {
 
 }
-                                  
+
 h1#site-title {
-  float: left;  
+  float: left;
   background:url(images/logo.png);
   background-size:50px 50px;
   background-repeat:no-repeat;
@@ -45,13 +45,30 @@ h1#site-title a {
   float: right;
   list-style: none;
   display: block;
-  position: relative;      
+  position: relative;
   margin: 0
 }
-                
+
 #site-nav div.menu ul li{
   font-size: 17px;
   margin-right: 40px;
   float: left;
+}
+
+
+/* =people
+-------------------------------------------------------------- */
+
+.person {
+  margin-bottom:2em;
+  overflow:hidden;
+}
+.person h2 {
+  margin-top:0;
+}
+.person-photo {
+  float:left;
+  margin-right:1em;
+  width:180px;
 }
 

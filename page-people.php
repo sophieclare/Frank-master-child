@@ -36,12 +36,13 @@ get_header();
         ?>
 
         <article class="person vcard">
+
+          <div class="person-photo"><?php echo get_the_post_thumbnail($id, 'full',  array('class' => 'photo')) ?></div>
+
           <h2 class="fn">
             <a id="<?php echo $elementId ?>" name="<?php echo $elementId ?>"></a>
             <?php echo $name; ?><span class="title role"><?php echo $position; ?></span>
           </h2>
-
-          <div class="person-photo"><?php echo get_the_post_thumbnail($id, 'full',  array('class' => 'photo')) ?></div>
 
           <div><p><?php echo $bio;?></p></div>
         </article>
