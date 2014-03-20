@@ -68,6 +68,23 @@ h1#site-title a {
 .post-title {
   font-size:24px;
 }
+.post .post-header {
+  /*margin-left:185px;*/
+}
+.post .post-header h1 {
+  font-size:30px;
+  line-height:1.25;
+}
+.post .metadata {
+  font-size:15px;
+}
+.post .metadata .date,
+.post .metadata.vertical li {
+  margin-bottom:9px;
+}
+.post .metadata .date {
+  font-size:17px;
+}
 
 /* =people
 -------------------------------------------------------------- */
