@@ -55,6 +55,29 @@ h1#site-title a {
   float: left;
 }
 
+/* =post
+-------------------------------------------------------------- */
+
+.post-header {
+  margin-top:2em;
+}
+.post-header h1 {
+  line-height:25px;
+}
+
+/* =sidebar
+-------------------------------------------------------------- */
+
+#sidebar {
+  margin-top:2em;
+}
+#sidebar h3 {
+  line-height:25px;
+}
+#sidebar .navV {
+  list-style:none;
+  margin:0;
+}
 
 /* =people
 -------------------------------------------------------------- */
