@@ -39,12 +39,13 @@ get_header();
 
           <div class="person-photo"><?php echo get_the_post_thumbnail($id, 'full',  array('class' => 'photo')) ?></div>
 
-          <h2 class="fn">
-            <a id="<?php echo $elementId ?>" name="<?php echo $elementId ?>"></a>
-            <?php echo $name; ?><span class="title role"><?php echo $position; ?></span>
-          </h2>
-
-          <div><p><?php echo $bio;?></p></div>
+          <div class="person-bio">
+            <h2 class="fn">
+              <a id="<?php echo $elementId ?>" name="<?php echo $elementId ?>"></a>
+              <?php echo $name; ?><span class="title role"><?php echo $position; ?></span>
+            </h2>
+            <p><?php echo $bio;?></p>
+          </div>
         </article>
 
         <?php

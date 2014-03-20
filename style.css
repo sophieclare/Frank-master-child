@@ -108,6 +108,13 @@ h1#site-title a {
   margin-right:2em;
   width:25%;
 }
+.person-bio {
+  float:left;
+  width:70%;
+}
+.person-bio p {
+  font-size:17px;
+}
 
 /* =case-study
 -------------------------------------------------------------- */
