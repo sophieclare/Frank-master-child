@@ -72,12 +72,15 @@ h1#site-title a {
   margin-bottom:2em;
   overflow:hidden;
 }
+.person:last-child {
+  margin-bottom:0;
+}
 .person h2 {
   margin-top:0;
 }
 .person-photo {
   float:left;
-  margin-right:1em;
+  margin-right:2em;
   width:25%;
 }
 
