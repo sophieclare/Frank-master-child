@@ -1,0 +1,57 @@
+/*
+ Theme Name:   Frank
+ Theme URI:    http://www.lshift.net/Frank-master-child/
+ Description:  Frank Child Theme
+ Author:       Sophie Clare
+ Author URI:   http://example.com
+ Template:     Frank-master
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  Frank-master-child
+*/
+
+@import url("../Frank-master/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+body {
+
+}
+                                  
+h1#site-title {
+  float: left;  
+  background:url(images/logo.png);
+  background-size:50px 50px;
+  background-repeat:no-repeat;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+h1#site-title a {
+   font-size: 60px;
+   line-height: 0.9;
+   padding: 0 0 0 60px;
+   margin:  0;
+   color: #000;
+}
+
+#site-nav {
+  margin: 0;
+  border-bottom: 1px solid #000;
+}
+
+#site-nav div.menu ul{
+  float: right;
+  list-style: none;
+  display: block;
+  position: relative;      
+  margin: 0
+}
+                
+#site-nav div.menu ul li{
+  font-size: 17px;
+  margin-right: 40px;
+  float: left;
+}
+
