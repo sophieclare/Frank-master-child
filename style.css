@@ -37,22 +37,23 @@ h1#site-title a {
 }
 
 #site-nav {
-  margin: 0;
+  margin:0;
   border-bottom: 1px solid #000;
 }
 
-#site-nav div.menu ul{
-  float: right;
-  list-style: none;
-  display: block;
-  position: relative;
-  margin: 0
+#site-nav ul {
+  float:right;
+  list-style:none;
+  margin:12px 0 0;
 }
 
-#site-nav div.menu ul li{
-  font-size: 17px;
-  margin-right: 40px;
-  float: left;
+#site-nav li {
+  float:left;
+  font-size:17px;
+  margin-right:40px;
+}
+#site-nav li:last-child {
+  margin-right:0;
 }
 
 /* =post
@@ -89,6 +90,17 @@ h1#site-title a {
   float:left;
   margin-right:2em;
   width:25%;
+}
+
+/* =case-study
+-------------------------------------------------------------- */
+
+#case-study {
+
+}
+#case-study > h1 {
+  line-height:25px;
+  margin-top:20px;
 }
 
 /* =sidebar
