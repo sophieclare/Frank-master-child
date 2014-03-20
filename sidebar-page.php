@@ -5,7 +5,7 @@
  */
 ?>
 <!-- begin sidebar -->
-<div">
+<div class="column three">
 <h3>More in this section:</h3>
 <?php
 
