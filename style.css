@@ -86,6 +86,17 @@ h1#site-title a {
   font-size:17px;
 }
 
+/* =news
+-------------------------------------------------------------- */
+
+#news > h1 {
+  line-height:25px;
+  margin-top:20px;
+}
+#news article:first-child {
+  margin-top:0 !important;
+}
+
 /* =people
 -------------------------------------------------------------- */
 

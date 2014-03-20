@@ -5,82 +5,89 @@
  * @subpackage LShift_Theme
  *
 */
- 
+
 get_header();
 ?>
 
-
 <div class="page">
-    <div class="column colspan3">
-		<h1 <?php echo $first ?>><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-		<?php 
-		global $newsCategoryId;
-		if ( get_query_var('paged') ) { 
-			$paged = get_query_var('paged');
-		} 
-		else if ( get_query_var('page') ) {
-			$paged = get_query_var('page'); 
-		} 
-		else {
-			$paged = 1; 
-		}
-		query_posts('category_name=News&paged='.$paged); ?>
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<div class="blog entry" id="post-<?php the_ID(); ?>">
-						<div>
-						<h2 <?php echo $first ?>><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-						<?php the_content(__('Read more...')); ?>
+  <div class="post-group default row">
 
-						<?php $related_links = get_related_links(); ?>
-						<?php if ($related_links) {?>
-						<div class="seeAlso">
-							<h6>See Also:</h6>
-							<div class="nestedColumnContainer">
-								<ul>
-									<?php foreach ($related_links as $link): ?>
-								
-									<li class="column">
-										<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
-									</li>
-									
-									<?php endforeach; ?>
-								</ul>
-							</div>
-						</div>
-						<?php } ?>
+    <main id="content-primary" class="column six" role="main">
 
-						</div>
-					<div class="meta">
-						<div class="nestedColumnContainer">	
-							<dl class="column"> 
-								<dt>by</dt>
-								<dd><?php the_author() ?></dd>
-						   </dl>
-							<dl class="column"> 
-								<dt>on</dt>                        
-								<dd><?php the_date('d/m/y'); ?> </dd>
-							</dl>
-							 <a href="<?php comments_link(); ?>" title="Comment on <?php the_title(); ?>">
-								 <dl class="commentsLink column"> 
-									<dt>Comments</dt>
-									<dd><?php comments_number('[+]', '1', '%'); ?></dd>
-								</dl>
-							</a>
-						</div>
-					</div>
-				</div>
-       
-    <?php $first=""; ?>
-    <?php endwhile; else: ?>
-    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-    <?php endif; ?>
-    
-    <p><?php posts_nav_link('&nbsp;', __('&laquo; Newer Posts'), __('Older Posts &raquo;')); ?>
-    </p>
-    
-   	</div>
+      <section id="news">
 
-<?php wp_reset_query();
-	get_sidebar('page'); ?>
+        <h1><?php the_title(); ?></h1>
+
+        <?php
+          global $newsCategoryId;
+
+          if ( get_query_var('paged') ) {
+            $paged = get_query_var('paged');
+          }
+          else if ( get_query_var('page') ) {
+            $paged = get_query_var('page');
+          }
+          else {
+            $paged = 1;
+          }
+
+          query_posts('category_name=News&paged='.$paged);
+        ?>
+
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+          <article itemscope itemtype="http://schema.org/BlogPosting" class="post leftaside">
+            <header class="post-header">
+              <h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+            </header>
+            <?php if ( $post->post_excerpt ) : ?>
+              <div id='excerpt'><?php the_excerpt(); ?></div>
+            <?php endif; ?>
+            <div id='content-main' class='row'>
+              <section class='post-content clearfix'>
+                <?php the_post_thumbnail( 'default-thumbnail' ); ?>
+                <?php the_content(); ?>
+                <?php wp_link_pages( 'before=<div class="pagination small"><span class="title">Pages:</span>&after=</div>' ); ?>
+              </section>
+              <div class='post-info'>
+                <?php get_template_part( 'partials/post-metadata' ); ?>
+                <?php if ( frank_tweet_post_button() ) : ?>
+                <a id="post-tweet" class="button alt small" href="https://twitter.com/share?text=<?php echo rawurlencode( strip_tags( get_the_title() ) ); ?><?php if ( frank_tweet_post_attribution() ) : ?>&amp;via=<?php echo frank_tweet_post_attribution(); ?>&amp;related=<?php echo frank_tweet_post_attribution(); ?><?php endif; ?>&amp;url=<?php the_permalink(); ?>&amp;counturl=<?php the_permalink(); ?>" target="_blank">
+                <?php _e( 'Tweet this Post', 'frank_theme' ); ?>
+                </a>
+                <?php endif; ?>
+                <!--<div id="prev-post" class="clearfix">
+                  <?php previous_post_link( '%link', '<nav><span class="arrow">%title</span></nav><p>%title</p>' ); ?>
+                </div> -->
+                <?php if ( !dynamic_sidebar( 'Post Left Aside' ) ) : ?>
+                <?php endif; ?>
+              </div>
+            </div>
+            <?php if ( is_active_sidebar( 'widget-postfooter' ) ) : ?>
+            <footer id="post-footer" class='row'>
+              <?php if ( !dynamic_sidebar( 'Post Footer' ) ) : ?>
+              <?php endif; ?>
+            </footer>
+            <?php endif; ?>
+          </article>
+
+          <?php $first=""; ?>
+          <?php endwhile; else: ?>
+          <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+
+        <?php endif; ?>
+
+        <p><?php posts_nav_link('&nbsp;', __('&laquo; Newer Posts'), __('Older Posts &raquo;')); ?></p>
+
+      </section>
+
+    </main>
+
+    <?php get_sidebar('page'); ?>
+    <!-- end sidebar -->
+
+  </div>
+
+<?php wp_reset_query(); ?>
 </div>
 <?php get_footer(); ?>
