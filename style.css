@@ -65,20 +65,6 @@ h1#site-title a {
   line-height:25px;
 }
 
-/* =sidebar
--------------------------------------------------------------- */
-
-#sidebar {
-  margin-top:2em;
-}
-#sidebar h3 {
-  line-height:25px;
-}
-#sidebar .navV {
-  list-style:none;
-  margin:0;
-}
-
 /* =people
 -------------------------------------------------------------- */
 
@@ -94,4 +80,39 @@ h1#site-title a {
   margin-right:1em;
   width:25%;
 }
+
+/* =sidebar
+-------------------------------------------------------------- */
+
+#sidebar {
+  margin-top:2em;
+}
+#sidebar h3 {
+  line-height:25px;
+}
+#sidebar .navV {
+  list-style:none;
+  margin:0;
+}
+
+/* =footer
+-------------------------------------------------------------- */
+
+#page-footer ul {
+  list-style:none;
+  margin:0 0 2em;
+  overflow:hidden;
+}
+#page-footer li {
+  float:left;
+  font-size:1.5em;
+  margin-right:3em;
+}
+.foot {
+  font-size:1.5em;
+}
+.foot abbr {
+  border-bottom:none;
+}
+
 
