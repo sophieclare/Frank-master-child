@@ -139,10 +139,15 @@ h1#site-title a {
 /* =case-study
 -------------------------------------------------------------- */
 
-#case-study {
-
-}
 #case-study > h1 {
+  line-height:25px;
+  margin-top:20px;
+}
+
+/* =site-map
+-------------------------------------------------------------- */
+
+.page-template-page-sitemap-php .post > h1 { /* WTF Wordpress! */
   line-height:25px;
   margin-top:20px;
 }
