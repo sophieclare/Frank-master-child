@@ -9,13 +9,14 @@
 get_header();
 ?>
 
+<div id="content" class="page">
+  <div class="row">
 
-<div class="page">
-    <div class="column colspan3">
+    <main id="people" class="row" role="main">
 		<h1><?php the_title(); ?></h1>
 		<p>These are just a few of our past and current clients:</p>
-		<?php query_posts( array('post_type' => 'clients', 'orderby' => 'menu_order title', 'order' => 'asc', 'posts_per_page' => 30)); ?>
-		<div class="nestedColumnContainer">
+		<?php query_posts( array('post_type' => 'clients', 'orderby' => 'menu_order title', 'order' => 'asc', 'posts_per_page' => 90)); ?>
+         <div class="column">
 						<ol class="clients">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); 
 					$id = get_the_ID();
@@ -23,7 +24,7 @@ get_header();
 					$sector = get_post_meta( $id, '_sector', true );
 				// 
 				?>
-					<li class="column" style="float: left;">
+					<li class="three column" >
 						<dl>
 							<dt class="clienthead">Client:</dt>
 								<dd class="clienthead">
@@ -51,8 +52,9 @@ get_header();
 				<?php endif; ?>
 				<?php wp_reset_query(); ?>
 			</ol>
+      </div>
+      </main>
+	<?php get_sidebar('page'); ?>    
 		</div>
-	</div>
-	<?php get_sidebar('page'); ?>
 </div>
 <?php get_footer(); ?>
