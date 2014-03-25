@@ -51,8 +51,8 @@ get_header();
 			                                      
 			<div class="feature row">
 				<div class="six columns">
+					<div class="blog">                              
 					<h3><a href="/blog/">Blog latest</a></h3>
-					<div class="blog">
 						<ol xmlns:rss1="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" class="feed">
 							<?php $recent = new WP_Query("cat=-2&showposts=2"); while($recent->have_posts()) : $recent->the_post();?>
 							<li><h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -70,8 +70,8 @@ get_header();
 			<div class="six columns">
 
 				<div class="homeModule">
+					<div class="news">                                             
 					<h3>News Latest <a href="about/news/">[Archive]</a></h3>
-					<div class="news">
 						<ol xmlns:rss1="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" class="feed">			
 							<?php 
 							global $newsCategoryId;
