@@ -28,6 +28,7 @@ h1#site-title {
   margin: 0;
   padding: 0;
 }
+
 h1#site-title a {
    font-size: 60px;
    line-height: 0.9;
@@ -59,10 +60,25 @@ h1#site-title a {
 /* =home
 -------------------------------------------------------------- */
 
+.home .news,
+.home .blog {
+  margin-top: 25px;
+}  
+
+.home .news h3,
+.home .blog h3 {
+  border-bottom: 1px solid #050000;
+}
+
 .home .news ol,
 .home .blog ol {
   list-style:none;
-  margin:0;
+  margin: 0;
+}
+       
+.home .news ol li,
+.home .blog ol li {
+  margin-bottom: 25px;
 }
 
 /* =post
@@ -142,6 +158,14 @@ h1#site-title a {
 #case-study > h1 {
   line-height:25px;
   margin-top:20px;
+}
+                        
+/* =clients
+-------------------------------------------------------------- */
+
+ol.clients {
+  list-style:none;
+  margin:0;
 }
 
 /* =site-map
