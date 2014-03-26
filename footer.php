@@ -32,8 +32,9 @@
 	<div class="vcard"><span class="copy"> 2000-14 </span><span class="fn org">LShift Ltd</span>, 
         <span class="adr"><abbr class="geo" title="51.527022; -0.081207"><span class="street-address">1st Floor, Hoxton Point, 6 Rufus Street, </span><span class="locality">London</span>, 
         <span class="postal-code">N1 6PE</span>, 
-        <span class="country-name">UK</span></abbr></span><span class="tel">+44 (0)20 7729 7060</span>
-        <span class="contact">&nbsp;&nbsp;<a  href="/about/contact-us">Contact us</a></span>
+        <span class="country-name">UK</span></abbr></span><span class="tel">+44 (0)20 7729 7060</span>       
+        <span class="twitter"><a href="https://twitter.com/lshift">Twitter</a></span>              
+        <span class="facebook"><a href="http://www.facebook.com/lshift">Facebook</a></span>
 </div>
 
              
