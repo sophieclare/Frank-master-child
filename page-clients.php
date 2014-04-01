@@ -25,17 +25,15 @@ get_header();
 				// 
 				?>
 					<li class="three column" >
-						<dl>
-							<dt class="clienthead">Client:</dt>
-								<dd class="clienthead">
 									<h3><?php the_title()?></h3>
-									<?php echo get_the_post_thumbnail($id, 'full'); ?></dd>
+									<?php echo get_the_post_thumbnail($id, 'full'); ?>  
+						<dl>
 									<?php $related_links = get_related_links(); ?>
 
 								<?php if ($related_links) {?>
 
 								<?php foreach ($related_links as $link): ?>
-								
+								                        
 							<dt>Link:</dt>
 								<dd><a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']?>"><?php echo $link['title']; if (strpos($link['url'], 'case-studies') !== false) { echo ' case study'; }?></a></dd>
 									
